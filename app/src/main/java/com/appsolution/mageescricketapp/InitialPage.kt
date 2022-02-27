@@ -1,5 +1,6 @@
 package com.appsolution.mageescricketapp
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -29,18 +30,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
+import androidx.navigation.NavController
 
-    @Composable
-    fun IntialPage(){
+@Composable
+    fun IntialPage(navController: NavController){
 
         var selected by remember { mutableStateOf("") }
         var expanded by remember { mutableStateOf(false) }
-        val numOfPlayers = listOf(1,2,3,4)
+        val numOfPlayers = listOf(2,3,4)
         var dropDownWidth by remember { mutableStateOf(Size.Zero) }
 
         Column(modifier = Modifier
@@ -103,7 +106,9 @@ import androidx.compose.ui.unit.toSize
             }
             Button(
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
-                onClick = { /*TODO*/ },
+                onClick = {
+                    navController.navigate("Game/$selected")
+                },
                 modifier = Modifier.padding(18.dp)
             ) {
                 Text(text = "Start Game")

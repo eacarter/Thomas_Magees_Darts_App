@@ -6,11 +6,15 @@
         <entry key="../../../../layout/compose-model-1644796003811.xml" value="0.5008445945945946" />
         <entry key="../../../../layout/compose-model-1644800839784.xml" value="0.30996621621621623" />
         <entry key="../../../../layout/compose-model-1645018819201.xml" value="0.5008445945945946" />
+        <entry key="../../../../layout/compose-model-1645912316063.xml" value="0.48184121621621623" />
+        <entry key="../../../../layout/compose-model-1645915711714.xml" value="0.25" />
+        <entry key="../../../../layout/compose-model-1645997795622.xml" value="0.48184121621621623" />
         <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/drawable/ic_cross.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.35625" />
         <entry key="app/src/main/res/drawable/ic_slash.xml" value="0.3411458333333333" />
         <entry key="app/src/main/res/layout/circle_layout.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/cross_layout.xml" value="0.34010416666666665" />
         <entry key="app/src/main/res/layout/slash_layout.xml" value="0.34010416666666665" />
       </map>
