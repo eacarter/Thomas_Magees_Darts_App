@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.toSize
 import androidx.navigation.NavController
 
 @Composable
-    fun IntialPage(navController: NavController){
+    fun InitialPage(navController: NavController){
 
         var selected by remember { mutableStateOf("") }
         var expanded by remember { mutableStateOf(false) }
@@ -99,15 +99,21 @@ import androidx.navigation.NavController
                     .width(with(LocalDensity.current){dropDownWidth.width.toDp()})
             ) {
                 numOfPlayers.forEach{
-                        label -> DropdownMenuItem(onClick= {selected = label.toString() }) {
-                    Text(text = label.toString())
+                        label ->
+                    DropdownMenuItem(onClick= {selected = label.toString() }) {
+                        Text(text = label.toString())
+                    }
                 }
+                if(selected.isNotEmpty() || !selected.isNullOrBlank()) {
+                    navController.navigate("Game/$selected")
                 }
             }
             Button(
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
                 onClick = {
-                    navController.navigate("Game/$selected")
+                    if(selected.isNotEmpty() || !selected.isNullOrBlank()) {
+                        navController.navigate("Game/$selected")
+                    }
                 },
                 modifier = Modifier.padding(18.dp)
             ) {

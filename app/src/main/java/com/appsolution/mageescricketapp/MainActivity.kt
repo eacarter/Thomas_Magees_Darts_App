@@ -30,14 +30,14 @@ class MainActivity : ComponentActivity() {
         val navController = rememberNavController()
         NavHost(navController, startDestination = "initial") {
             composable(route = "initial") {
-                IntialPage(navController)
+                InitialPage(navController)
             }
             composable(route = "Game/{id}") { navBackStack ->
 
                 val players = navBackStack.arguments?.getString("id")
 
                 if (players != null) {
-                    GamePage(players.toInt())
+                    GamePage(players.toInt(), navController)
                 }
             }
         }
